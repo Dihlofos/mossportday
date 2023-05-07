@@ -1,0 +1,16 @@
+.title {
+  font-family: $mossport;
+  font-weight: 700;
+  font-size: 6.4rem;
+  line-height: 6.4rem;
+  color: $white;
+  text-transform: uppercase;
+  margin: 0 0 6rem;
+  letter-spacing: 0.1rem;
+
+  @media (max-width: $mobile) {
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0 0 25px;
+  }
+}
