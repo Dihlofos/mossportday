@@ -1,5 +1,9 @@
 .header {
 
+  .container {
+    max-width: 140rem;
+  }
+
   &__nav {
     position: relative;
     padding: 2rem 12.7rem 0 0;

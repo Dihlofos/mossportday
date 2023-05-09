@@ -1,0 +1,62 @@
+.map {
+  padding: 11.5rem 0 20rem;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__map {
+    position: relative;
+    width: 136%;
+    max-width: 179.6rem;
+    margin-left: 11.8rem;
+    margin-top: -9.3rem;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .figure {
+      cursor: pointer;
+
+      &.is-active {
+        rect {
+          fill: $red;
+          stroke: $white;
+        }
+
+        path {
+          fill: $white;
+        }
+      }
+    }
+  }
+
+  &__left-decor {
+    position: absolute;
+    left: -11.8rem;
+    top: 10.9rem;
+  }
+
+  &__top-decor {
+    position: absolute;
+    right: -22.6rem;
+    top: -31rem;
+  }
+
+  &__bottom-decor {
+    position: absolute;
+    right: -26.8rem;
+    bottom: -30.2rem;
+  }
+}

@@ -1,0 +1,54 @@
+.concert {
+  position: relative;
+  padding: 8rem 0 1.6rem;
+  background-color: $red;
+  color: $white;
+  z-index: 5;
+
+  .container {
+    max-width: 132rem;
+  }
+
+  &__title {
+    margin: 0 0 3.3rem;
+  }
+
+  &__description {
+    margin: 0 0 4.5rem;
+    font-size: 1.88rem;
+    line-height: 1.4;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 7.8rem;
+
+    img {
+      margin: 0 0 -1rem;
+    }
+
+    p {
+      font-family: $mossport;
+      text-transform: uppercase;
+      margin: -1.2rem 0 0;
+      font-size: 3.6rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+
+}

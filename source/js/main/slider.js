@@ -1,13 +1,49 @@
 "use strict";
 (function () {
-  new Swiper(".js-slider", {
+  const contentsEls = document.querySelectorAll(".js-content");
+  const thumbs = document.querySelectorAll(".js-thumb");
+  // e - индекс слайда
+  const toggleContent = (e) => {
+    console.log('e', e);
+    contentsEls.forEach((item) => {
+      const contentIndex = item.dataset.contentIndex;
+      if (Number(contentIndex) === Number(e)) {
+        item.classList.add("is-active");
+      } else {
+        item.classList.remove("is-active");
+      }
+    });
+
+    thumbs.forEach((item) => {
+      const thumbIndex = item.dataset.thumbIndex;
+      if (Number(thumbIndex) === Number(e)) {
+        item.classList.add("is-active");
+      } else {
+        item.classList.remove("is-active");
+      }
+    });
+  };
+
+  thumbs.forEach((item) => {
+    const thumbIndex = item.dataset.thumbIndex;
+    item.addEventListener('click', () => {
+      toggleContent(thumbIndex);
+    })
+  });
+
+
+  const swiperSlider = new Swiper(".js-slider", {
     // Optional parameters
-    loop: true,
-    slidesPerView: 'auto',
+    slidesPerView: "auto",
+    spaceBetween: 0,
+    initialSlide: 0,
     speed: 1000,
-    pagination: {
-      el: ".swiper-pagination",
-    },
+    draggable: false,
+    pagination: false,
+    loop: false,
+    allowTouchMove: false,
+    slideToClickedSlide: true,
+
     navigation: {
       nextEl: ".swiper__next",
       prevEl: ".swiper__prev",
@@ -16,37 +52,18 @@
       320: {
         slidesPerView: 1,
         spaceBetween: 0,
+        allowTouchMove: true,
       },
 
       768: {
-        slidesPerView: 4,
-        spaceBetween: 20,
+        slidesPerView: 3,
+        spaceBetween: 30,
       },
 
       1025: {
-        slidesPerView: 4,
-        spaceBetween: 43,
+        slidesPerView: "auto",
+        spaceBetween: 30,
       },
     },
   });
-
-  if (isTouchDevice()) {
-    const slides = document.querySelectorAll('.js-slider .swiper-slide');
-    slides.forEach((slide)=>{
-      slide.addEventListener('click', ()=>{
-        slide.classList.toggle('hover');
-      })
-    })
-
-} else {
-    return;
-}
-
-function isTouchDevice() {
-    return (('ontouchstart' in window) ||
-        (navigator.maxTouchPoints > 0) ||
-        (navigator.msMaxTouchPoints > 0));
-}
-
-
 })();
