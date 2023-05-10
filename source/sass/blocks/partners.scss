@@ -1,0 +1,63 @@
+.partners {
+    padding: 0 0 6rem;
+
+    .container {
+      position: relative;
+    }
+
+    &__title {
+      margin: 0 0 13.2rem;
+    }
+    &__left-top-decor {
+      position: absolute;
+      left: -15rem;
+      top: 18.5rem;
+    }
+
+    &__right-top-decor {
+      position: absolute;
+      right: -32rem;
+      top: 15rem;
+    }
+
+    &__right-bottom-decor {
+      position: absolute;
+      right: -29rem;
+      top: 24rem;
+    }
+
+    &__left-bottom-decor {
+      position: absolute;
+      left: -25.3rem;
+      bottom: -38.7rem;
+    }
+
+    &__logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+      padding: 0 3rem 4rem 0;
+    }
+
+    &__organizators {
+
+      margin: 0 0 19.5rem;
+    }
+
+    &__partners {
+      position: relative;
+      margin: 0 0 11.9rem;
+
+      .partners__title {
+        margin: 0 0 15rem;
+      }
+    }
+
+    &__info {
+      position: relative;
+      .partners__title {
+        margin: 0 0 9.5rem;
+      }
+    }
+}
