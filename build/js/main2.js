@@ -15,6 +15,20 @@
 
 "use strict";
 (function () {
+  const dropdowns = document.querySelectorAll('.js-dropdown');
+
+  dropdowns.forEach((dropdown)=> {
+    const trigger = dropdown.querySelector('.js-dropdown-trigger');
+
+    trigger.addEventListener('click', () => {
+      dropdown.classList.toggle('open');
+    })
+  })
+
+})();
+
+"use strict";
+(function () {
   const togglers = document.querySelectorAll(".js-faq-toggler");
   if (!togglers.length) return;
 
@@ -45,7 +59,7 @@
     pagination: false,
     loop: false,
     allowTouchMove: false,
-    slideToClickedSlide: true,
+    slideToClickedSlide: false,
 
     navigation: {
       nextEl: ".swiper__next",

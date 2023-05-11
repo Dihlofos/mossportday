@@ -13,7 +13,7 @@
     pagination: false,
     loop: false,
     allowTouchMove: false,
-    slideToClickedSlide: true,
+    slideToClickedSlide: false,
 
     navigation: {
       nextEl: ".swiper__next",
