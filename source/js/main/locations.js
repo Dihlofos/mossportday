@@ -1,37 +1,5 @@
 "use strict";
 (function () {
-  let upButton = document.querySelector(".up");
-
-  if (upButton) {
-    window.onscroll = function () {
-      if (window.pageYOffset > 260) {
-        upButton.classList.add("up--shown");
-      } else {
-        upButton.classList.remove("up--shown");
-      }
-    };
-  }
-})();
-
-"use strict";
-(function () {
-  const togglers = document.querySelectorAll(".js-faq-toggler");
-  if (!togglers.length) return;
-
-  togglers.forEach((toggler) => {
-    toggler.addEventListener("click", (event) => {
-      const target = event.currentTarget;
-      if (!target) return;
-      const content = target.nextElementSibling;
-      if (!content) return;
-      target.classList.toggle("active");
-      content.classList.toggle("active");
-    });
-  });
-})();
-
-"use strict";
-(function () {
   const contentsEls = document.querySelectorAll(".js-content");
   const thumbs = document.querySelectorAll(".js-thumb");
 
@@ -216,13 +184,4 @@
 
 
 
-})();
-
-"use strict";
-(function () {
-  window.scroll = new SmoothScroll(".js-scroll", {
-    speed: 800,
-    speedAsDuration: true,
-    easing: "easeOutQuad",
-  });
 })();
