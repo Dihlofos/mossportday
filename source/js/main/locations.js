@@ -23,6 +23,7 @@
       320: {
         slidesPerView: 2,
         spaceBetween: 0,
+        draggable: true,
         allowTouchMove: true,
       },
 
