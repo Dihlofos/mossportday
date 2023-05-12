@@ -34,8 +34,16 @@
     padding: 6rem 0 1.5rem;
     margin: 0;
 
-    @media (max-width: $mobile) {
-      padding: 55px 0 23px;
+    @media(max-width: $tablet) {
+      padding: 60px 0 20px
+    }
+
+
+  }
+
+  &__item {
+    @media(max-width: $tablet) {
+      font-size: 26px;
     }
   }
 
@@ -47,6 +55,11 @@
     padding: 0 2rem 0 2.3rem;
     text-decoration: none;
     transition: 0.1s font-weight ease-in-out, 0.1s background-color ease-in-out;
+
+    @media (max-width: $tablet) {
+      font-size: 18px;
+      line-height: 1.3;
+    }
 
     @media (max-width: $mobile) {
       padding: 0 20px 0 23px;
@@ -71,6 +84,11 @@
     z-index: 4;
     overflow: hidden;
     max-height: 4rem;
+
+    @media(max-width: $tablet) {
+      top: 0px;
+      max-height: 48px;
+    }
 
     @media (max-width: $mobile) {
       top: 15px;

@@ -1,13 +1,22 @@
 .partners {
     padding: 0 0 6rem;
 
+    @media (max-width: $tablet) {
+      padding: 0 0 0;
+    }
+
     .container {
       position: relative;
     }
 
     &__title {
       margin: 0 0 13.2rem;
+
+      @media (max-width: $tablet) {
+        margin: 0 0 54px;
+      }
     }
+
     &__left-top-decor {
       position: absolute;
       left: -15rem;
@@ -18,6 +27,10 @@
       @media (max-width: $laptop) {
         left: -23rem;
       }
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
     }
 
     &__right-top-decor {
@@ -26,6 +39,14 @@
       top: 15rem;
       width: 81.2rem;
       height: 67.1rem;
+
+      @media (max-width: $tablet) {
+        position: absolute;
+        right: -228px;
+        top: -259px;
+        width: 468px;
+        height: auto;
+      }
     }
 
     &__right-bottom-decor {
@@ -34,6 +55,10 @@
       top: 24rem;
       width: 59rem;
       height: 61.4rem;
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
     }
 
     &__left-bottom-decor {
@@ -42,6 +67,15 @@
       bottom: -38.7rem;
       width: 61.6rem;
       height: 58.3rem;
+
+      @media (max-width: $tablet) {
+        position: absolute;
+        left: -176px;
+        top: -193px;
+        width: 340px;
+        height: auto;
+        transform: rotate(14deg);
+      }
     }
 
     &__logos {
@@ -53,8 +87,7 @@
     }
 
     &__organizators {
-
-      margin: 0 0 19.5rem;
+      margin: 0 0 80px;
     }
 
     &__partners {
@@ -63,6 +96,10 @@
 
       .partners__title {
         margin: 0 0 15rem;
+
+        @media (max-width: $tablet) {
+          margin: 0 0 56px;
+        }
       }
     }
 
@@ -70,6 +107,10 @@
       position: relative;
       .partners__title {
         margin: 0 0 9.5rem;
+
+        @media (max-width: $tablet) {
+          margin: 0 0 77px;
+        }
       }
     }
 }

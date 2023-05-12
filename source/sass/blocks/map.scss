@@ -2,6 +2,10 @@
   padding: 11.5rem 0 20rem;
   overflow: hidden;
 
+  @media (max-width: $tablet) {
+    padding: 86px 0 114px;
+  }
+
   .container {
     position: relative;
   }
@@ -16,6 +20,14 @@
     max-width: 179.6rem;
     margin-left: 11.8rem;
     margin-top: -9.3rem;
+
+    @media (max-width: $tablet) {
+      margin: 0;
+      max-width: 1072px;
+      width: 156%;
+      margin-top: -35px;
+      margin-left: -38px;
+    }
 
   }
 
@@ -60,6 +72,10 @@
     top: 10.9rem;
     width: 54.8rem;
     height: 49.5rem;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 
   &__top-decor {
@@ -68,6 +84,10 @@
     top: -31rem;
     width: 36.8rem;
     height: 38.3rem;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 
   &__bottom-decor {
@@ -76,6 +96,10 @@
     bottom: -30.2rem;
     width: 63rem;
     height: 63.7rem;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 
   &__modal {
@@ -98,6 +122,13 @@
       visibility: visible;
     }
 
+    @media (max-width: $tablet) {
+      width: 372px;
+      padding: 36px;
+      top: 101px;
+      left: 38px;
+    }
+
   }
 
   &__modal-title {
@@ -109,6 +140,10 @@
     text-transform: uppercase;
     margin: 0 0 2rem;
     max-width: 85%;
+
+    @media (max-width: $tablet) {
+      font-size: 36px;
+    }
   }
 
   &__modal-close {
@@ -121,6 +156,11 @@
     border: none;
     cursor: pointer;
     color: $white;
+
+    @media (max-width: $tablet) {
+      top: 27px;
+      right: 20px;
+    }
   }
 
   &__modal-goto {

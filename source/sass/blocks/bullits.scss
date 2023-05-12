@@ -1,6 +1,10 @@
 .bullits {
   padding: 9.5rem 0 0;
 
+  @media (max-width: $tablet) {
+    padding: 0;
+  }
+
   .container {
     position: relative;
     max-width: 140rem;
@@ -12,6 +16,10 @@
     left: -20rem;
     width: 35.5rem;
     height: 31.2rem;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 
   &__right-decor {
@@ -20,6 +28,10 @@
     right: -22rem;
     width: 37.5rem;
     height: 32.6rem;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 
   &__list {
@@ -27,6 +39,21 @@
     padding: 0;
     margin: 0;
     display: flex;
+
+    &--mobile {
+      display: none;
+    }
+
+    @media (max-width: $tablet) {
+      flex-wrap: wrap;
+      &--desktop {
+        display: none;
+      }
+
+      &--mobile {
+        display: flex;
+      }
+    }
   }
 
   &__content {
@@ -83,6 +110,20 @@
         height: 39.9rem;
       }
 
+      @media (max-width: $tablet) {
+        width: 53%;
+        margin: 0;
+        top: 12px;
+        right: -23px;
+        z-index: 5;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+
     }
 
     &--hundred {
@@ -94,6 +135,19 @@
       img {
         width: 43.6rem;
         height: 43.6rem;
+      }
+
+      @media (max-width: $tablet) {
+        width: 46%;
+        margin: 0;
+        top: 30px;
+        left: -44px;
+
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
 
@@ -108,6 +162,20 @@
         height: 42.4rem;
       }
 
+      @media (max-width: $tablet) {
+        width: 47%;
+        top: 0;
+        z-index: 2;
+        margin: -144px 0 0;
+        right: -13px;
+
+        img {
+          width: 100%;
+          height: 100%;
+
+        }
+      }
+
     }
 
     &--hits {
@@ -119,6 +187,20 @@
       img {
         width: 40.6rem;
         height: 41.2rem;
+      }
+
+      @media (max-width: $tablet) {
+        width: 53%;
+        margin: 0;
+        top: 0;
+        z-index: 4;
+        margin-top: -56px;
+        right: 15px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
 
     }

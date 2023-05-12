@@ -3,6 +3,10 @@
   padding: 19rem 0 33.5rem;
   z-index: 2;
 
+  @media (max-width: $tablet) {
+    padding: 58px 0 109px;
+  }
+
   &__title {
     position: relative;
     z-index: 2;
@@ -15,6 +19,10 @@
     z-index: 1;
     width: 76.4rem;
     height: 78.7rem;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 
   &__right-bottom-decor {
@@ -24,6 +32,10 @@
     z-index: 1;
     width: 50.1rem;
     height: 38.5rem;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 
   &__left-bottom-decor {
@@ -33,6 +45,10 @@
     z-index: 1;
     width: 67.4rem;
     height: 66.9rem;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 
   &__accordeon {
@@ -48,6 +64,10 @@
   &__title {
     margin: 0 0 5rem;
 
+    @media (max-width: $tablet) {
+      margin: 0 0 63px;
+    }
+
     @media (max-width: $mobile) {
       font-weight: 500;
       font-size: 40px;
@@ -61,6 +81,11 @@
     border-bottom: 3px solid $purple;
     margin: 0 0 3.9rem;
     padding: 0 0 3rem;
+
+    @media (max-width: $tablet) {
+      margin: 0 0 25px;
+
+    }
 
     @media (max-width: $mobile) {
       padding: 0 0 16px;
@@ -87,6 +112,12 @@
     cursor: pointer;
     padding: 0;
 
+    @media (max-width: $tablet) {
+      font-size: 38px;
+      text-align: left;
+
+    }
+
     @media (max-width: $mobile) {
       font-size: 27px;
       line-height: 1.1;
@@ -112,6 +143,7 @@
     display: flex;
     width: 5.5rem;
     height: 5.5rem;
+
     svg {
       fill: $purple;
       align-self: flex-start;
@@ -119,6 +151,12 @@
 
     .faq__minus {
       display: none;
+    }
+
+    @media (max-width: $tablet) {
+      width: 40px;
+      height: 40px;
+      margin: 0 0 0 50px;
     }
   }
 
@@ -133,8 +171,8 @@
     max-width: 120rem;
 
     @media (max-width: $tablet) {
-      font-size: 14px;
-      line-height: 17px;
+      font-size: 20px;
+      line-height: 1.4;
     }
 
     &.active {

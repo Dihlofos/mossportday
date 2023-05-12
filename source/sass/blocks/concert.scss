@@ -5,18 +5,31 @@
   color: $white;
   z-index: 5;
 
+  @media (max-width: $tablet) {
+    padding: 58px 0 70px;
+  }
+
   .container {
     max-width: 132rem;
   }
 
   &__title {
     margin: 0 0 3.3rem;
+
+    @media (max-width: $tablet) {
+      margin: 0 0 36px;
+    }
   }
 
   &__description {
     margin: 0 0 4.5rem;
     font-size: 1.88rem;
     line-height: 1.4;
+
+    @media (max-width: $tablet) {
+      font-size: 20px;
+      margin: 0 0 50px;
+    }
   }
 
   &__list {
@@ -28,6 +41,10 @@
     padding: 0;
     margin: 0;
     gap: 1rem;
+
+    @media (max-width: $tablet) {
+      gap: 70px;
+    }
   }
 
   &__item {
@@ -49,6 +66,24 @@
       margin: -1.2rem 0 0;
       font-size: 3.6rem;
       letter-spacing: 0.1rem;
+    }
+
+    @media (max-width: $tablet) {
+      width: calc(47% - 70px);
+      margin: 0;
+
+      img {
+        margin: 0;
+        width: 100%;
+        height: auto;
+      }
+
+      p {
+        margin: -35px 0 0;
+        font-size: 36px;
+        line-height: 1;
+        letter-spacing: 1px;
+      }
     }
   }
 
