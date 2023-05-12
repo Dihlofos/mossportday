@@ -16,6 +16,7 @@
     max-width: 179.6rem;
     margin-left: 11.8rem;
     margin-top: -9.3rem;
+
   }
 
   &__under {
@@ -51,25 +52,30 @@
 
         }
       }
-
   }
 
   &__left-decor {
     position: absolute;
     left: -11.8rem;
     top: 10.9rem;
+    width: 54.8rem;
+    height: 49.5rem;
   }
 
   &__top-decor {
     position: absolute;
     right: -22.6rem;
     top: -31rem;
+    width: 36.8rem;
+    height: 38.3rem;
   }
 
   &__bottom-decor {
     position: absolute;
     right: -26.8rem;
     bottom: -30.2rem;
+    width: 63rem;
+    height: 63.7rem;
   }
 
   &__modal {

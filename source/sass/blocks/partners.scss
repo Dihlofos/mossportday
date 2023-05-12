@@ -12,24 +12,36 @@
       position: absolute;
       left: -15rem;
       top: 18.5rem;
+      width: 43.7rem;
+      height: 42.5rem;
+
+      @media (max-width: $laptop) {
+        left: -23rem;
+      }
     }
 
     &__right-top-decor {
       position: absolute;
       right: -32rem;
       top: 15rem;
+      width: 81.2rem;
+      height: 67.1rem;
     }
 
     &__right-bottom-decor {
       position: absolute;
       right: -29rem;
       top: 24rem;
+      width: 59rem;
+      height: 61.4rem;
     }
 
     &__left-bottom-decor {
       position: absolute;
       left: -25.3rem;
       bottom: -38.7rem;
+      width: 61.6rem;
+      height: 58.3rem;
     }
 
     &__logos {
