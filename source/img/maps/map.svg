@@ -56,22 +56,6 @@
             <rect id="f1" x="311.5" y="346.5" width="24" height="22" fill="white" stroke="#E51F2F" stroke-width="5" />
             <path id="l1" d="M322.349 352H323.249V364H325.349V350H322.349V352Z" fill="#E51F2F" />
         </g>
-        <g class="figure 2" id="figure 2">
-            <rect id="Rectangle 377" x="779.5" y="694.5" width="21" height="21" fill="white" stroke="#E51F2F" stroke-width="5" />
-            <path id="2" d="M792.85 698.92C792.85 698.38 792.49 698 791.93 698H788.07C787.51 698 787.15 698.38 787.15 698.92V702H789.25V700H790.75V702L787.15 709.1V712H792.85V710H789.25V709.38L792.85 702.28V698.92Z" fill="#E51F2F" />
-        </g>
-        <g class="figure 3" id="figure 3">
-            <rect id="Rectangle 378" x="750.5" y="663.5" width="50" height="23" fill="white" stroke="#E51F2F" stroke-width="5" />
-            <path
-                id="3"
-                d="M777.933 682C778.493 682 778.853 681.62 778.853 681.08V673.96C778.853 673.42 778.493 673.04 777.933 673.04H776.833L778.753 669.8V668H773.253V670H776.553L774.653 673.18V675.04H776.753V680H775.253V677.4H773.153V681.08C773.153 681.62 773.513 682 774.073 682H777.933Z"
-                fill="#E51F2F"
-            />
-        </g>
-        <g class="figure 4" id="figure 4">
-            <rect id="Rectangle 379" x="750.5" y="612.5" width="50" height="43" fill="white" stroke="#E51F2F" stroke-width="5" />
-            <path id="4" d="M778.396 641V638.4H779.196V636.4H778.396V634.2L776.296 634.6V636.4H775.056L777.756 627H775.556L772.796 636.6V638.4H776.296V641H778.396Z" fill="#E51F2F" />
-        </g>
         <g class="figure 5" id="figure 5">
             <rect id="Rectangle 380" x="750.5" y="581.5" width="50" height="23" fill="white" stroke="#E51F2F" stroke-width="5" />
             <path

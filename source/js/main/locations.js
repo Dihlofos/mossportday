@@ -5,10 +5,10 @@
 
   const swiperSlider = new Swiper(".js-slider", {
     // Optional parameters
-    slidesPerView: "auto",
+    slidesPerView: 4,
     spaceBetween: 0,
     initialSlide: 0,
-    speed: 1000,
+    speed: 0,
     draggable: false,
     pagination: false,
     loop: false,
@@ -32,7 +32,7 @@
       },
 
       1025: {
-        slidesPerView: "auto",
+        slidesPerView: 4,
         spaceBetween: 30,
       },
     },
@@ -48,34 +48,31 @@
 
   const locations = {
     '1': 'Велком',
-    '2': 'Арт объект с оркестром',
-    '3': 'Лучшие спортивные фотографии',
-    '4': 'Ретроспектива - фотозоны',
     '5': 'Спортивная зона челленджей',
     '6': 'Фестиваль городских видов спорта',
     '7': 'Шахматы',
-    '8': 'Массовый турнир по футболу',
+    '8': 'МИНИ-ФУТБОЛ',
     '9': 'Сайклинг',
-    '10': 'Первенство России по ЛА',
-    '11': 'Фестиваль Фигурного катания',
-    '12' : 'Стритбол, 100 колец',
+    '10': 'ЛЕГКАЯ АТЛЕТИКА',
+    '11': 'Фигурное катание',
+    '12' : 'Стритбол',
     '13' : 'Детская зона',
     '14' : 'Настольный теннис',
     '15' : 'Зона экстремальных видов спорта',
-    '16' : 'Фан-встречи и автограф-сессии',
+    '16' : 'Фан',
     '17' : 'Стантрайдинг',
     '18' : 'Брейк-данс',
     '19' : 'Воркаут',
     '20' : 'Паркур и Трикинг',
     '21' : 'Фехтование',
     '22' : 'Полоса препятствий',
-    '23' : 'Кубок мира по Стронгмену',
-    '24' : 'Зона фитнеса',
+    '23' : 'Стронгмен',
+    '24' : 'Фитнес',
     '25' : 'Пейнтбол и Лазертаг',
-    '26' : 'Медиа футбол',
+    '26' : 'Медиа-футбол',
     '27' : 'Регби',
     '28' : 'Стретчинг',
-    '29' : 'Кинопоказ',
+    '29' : 'Кино',
     '30' : 'Концерт',
   }
 
@@ -105,9 +102,6 @@
       toggleContent(thumbIndex);
     })
   });
-
-
-
 
 
   // FUNCTIONS
@@ -151,9 +145,15 @@
   function onGoToLocation(locationNumber) {
     toggleContent(locationNumber);
     closeModal();
-    const scrollNumber = Number(locationNumber) > 3 ? Number(locationNumber) - 2 : 0;
-    swiperSlider.slideTo(scrollNumber);
+
+    swiperSlider.slideTo(getSlideIndex(locationNumber));
     // добавить скролл
+  }
+
+  function getSlideIndex(locationNumber) {
+    const element = document.querySelector(`.js-thumb[data-thumb-index="${locationNumber}"]`);
+    const elIndex = Array.from(element.parentNode.children).indexOf(element)
+    return Number(elIndex) > 3 ? Number(elIndex) - 2 : 0;
   }
 
 

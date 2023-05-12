@@ -30,6 +30,12 @@
     height: 100%;
     object-fit: cover;
 
+    // path {
+    //   display: none;
+    // }
+    // path.rect {
+    //   display: block;
+    // }
 
 
       .figure {
@@ -42,9 +48,7 @@
             stroke: $white;
           }
 
-          path {
-            fill: $white;
-          }
+
         }
       }
 
@@ -70,7 +74,7 @@
 
   &__modal {
     position: absolute;
-    top: 7rem;
+    top: 21rem;
     left: 35rem;
     z-index: 6;
     width: 37.2rem;
@@ -79,13 +83,13 @@
     border-radius: 43px;
     padding: 3.4rem 3.4rem 3.1rem 3.6rem;
     opacity: 0;
-    user-select: none;
+    visibility: hidden;
 
     transition: opacity 0.3s ease-in-out;
 
     &.is-active {
       opacity: 1;
-      user-select: auto;
+      visibility: visible;
     }
 
   }
