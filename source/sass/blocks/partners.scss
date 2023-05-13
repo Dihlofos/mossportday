@@ -15,6 +15,10 @@
       @media (max-width: $tablet) {
         margin: 0 0 54px;
       }
+
+      @media (max-width: $mobile) {
+        margin: 0 0 77px;
+      }
     }
 
     &__left-top-decor {
@@ -47,6 +51,11 @@
         width: 468px;
         height: auto;
       }
+
+      @media (max-width: $mobile) {
+        position: absolute;
+        top: 93px;
+      }
     }
 
     &__right-bottom-decor {
@@ -76,6 +85,15 @@
         height: auto;
         transform: rotate(14deg);
       }
+
+      @media (max-width: $mobile) {
+        position: absolute;
+        left: -115px;
+        top: -210px;
+        width: 264px;
+        height: auto;
+        transform: rotate(-2deg);
+      }
     }
 
     &__logos {
@@ -87,18 +105,36 @@
     }
 
     &__organizators {
-      margin: 0 0 80px;
+
+      margin: 0 0 8rem;
+
+      @media (max-width: $tablet) {
+        margin: 0 0 80px;
+      }
+
+
+      @media (max-width: $mobile) {
+          margin: 0 0 141px;
+        }
     }
 
     &__partners {
       position: relative;
       margin: 0 0 11.9rem;
 
+      @media (max-width: $mobile) {
+        margin: 0 0 167px;
+      }
+
       .partners__title {
         margin: 0 0 15rem;
 
         @media (max-width: $tablet) {
           margin: 0 0 56px;
+        }
+
+        @media (max-width: $mobile) {
+          margin: 0 0 77px;
         }
       }
     }

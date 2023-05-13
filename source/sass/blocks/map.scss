@@ -8,7 +8,7 @@
   }
 
   @media (max-width: $mobile) {
-    padding: 205px 0 114px;
+    padding: 205px 0 90px;
 
     .container {
       padding: 0;
@@ -149,9 +149,6 @@
 
     transition: opacity 0.3s ease-in-out;
 
-    &--mobile {
-      display: none;
-    }
 
     &.is-active {
       opacity: 1;
@@ -170,10 +167,6 @@
       padding: 36px;
       top: 291px;
       left: 16px;
-      &--mobile {
-        display: block;
-      }
-
     }
 
   }

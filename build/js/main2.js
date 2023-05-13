@@ -148,8 +148,6 @@
 
   // ACTIONS
 
-  console.log(mapScroller.scroll(272, 0));
-
   figures.forEach((figure) => {
     figure.addEventListener('click', () => {
       // все классы фигур идут вид "figure /*номер*/" поэтому смело берем [1]
@@ -180,6 +178,12 @@
 
   function onFigureClick(figure) {
     const locationNumber = figure.classList[1];
+
+    if (locationNumber === '30') {
+      modalGoTo.href = '#concert';
+    } else {
+      modalGoTo.href = '#locations';
+    }
 
     if (figure.classList.contains('is-active')) {
       resetFigures();
@@ -215,13 +219,14 @@
   }
 
   function onGoToLocation(locationNumber) {
+
+    if (locationNumber === '30') return;
+
     toggleContent(locationNumber);
     closeModal();
 
-    console.log('getSlideIndex(locationNumber)', getSlideIndex(locationNumber))
 
     swiperSlider.slideTo(getSlideIndex(locationNumber));
-    // добавить скролл
   }
 
   function getSlideIndex(locationNumber) {
