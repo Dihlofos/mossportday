@@ -14,9 +14,6 @@
       align-self: flex-end;
     }
 
-    @media (max-width: $mobile) {
-      display: none;
-    }
   }
 
   &__decor-circle {
@@ -36,6 +33,11 @@
       right: -237px;
       width: 277px;
       height: 277px;
+    }
+
+    @media (max-width: $mobile) {
+      top: -129px;
+      right: -336px;
     }
 
   }
@@ -59,10 +61,16 @@
     gap: 2.9rem;
     padding: 5.5rem 0 0 3.3rem;
     z-index: 2;
+
     @media (max-width: $tablet) {
       align-self: center;
       gap: 28px;
       padding: 40px 6px 0 0px;
+    }
+
+    @media (max-width: $mobile) {
+      gap: 15px;
+      padding: 74px 6px 0 0;
     }
   }
 

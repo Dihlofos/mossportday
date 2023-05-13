@@ -1,9 +1,18 @@
 .map {
+  position: relative;
   padding: 11.5rem 0 20rem;
   overflow: hidden;
 
   @media (max-width: $tablet) {
     padding: 86px 0 114px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 205px 0 114px;
+
+    .container {
+      padding: 0;
+    }
   }
 
   .container {
@@ -12,6 +21,10 @@
 
   &__title {
     margin: 0;
+
+    @media (max-width: $mobile) {
+      padding: 0 16px;
+    }
   }
 
   &__map {
@@ -27,6 +40,25 @@
       width: 156%;
       margin-top: -35px;
       margin-left: -38px;
+    }
+
+    @media (max-width: $mobile) {
+      max-width: 1242px;
+      width: 363%;
+    }
+  }
+
+  &__map-wrapper {
+    @media (max-width: $mobile) {
+      overflow-x: auto;
+      padding-top: 45px;
+
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0;
+        height: 0;
+        display: none;
+      }
     }
 
   }
@@ -117,6 +149,10 @@
 
     transition: opacity 0.3s ease-in-out;
 
+    &--mobile {
+      display: none;
+    }
+
     &.is-active {
       opacity: 1;
       visibility: visible;
@@ -127,6 +163,17 @@
       padding: 36px;
       top: 101px;
       left: 38px;
+    }
+
+    @media (max-width: $mobile) {
+      width: calc(100% - 32px);
+      padding: 36px;
+      top: 291px;
+      left: 16px;
+      &--mobile {
+        display: block;
+      }
+
     }
 
   }
@@ -143,6 +190,10 @@
 
     @media (max-width: $tablet) {
       font-size: 36px;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 0 0 26px;
     }
   }
 
@@ -165,5 +216,21 @@
 
   &__modal-goto {
     cursor: pointer;
+
+    @media (max-width: $mobile) {
+      font-size: 31px;
+      line-height: 1;
+    }
+  }
+
+  &__decor-mobile {
+    display: none;
+
+    @media (max-width: $tablet) {
+      position: absolute;
+      top: -70px;
+      left: -67px;
+      display: block;
+    }
   }
 }

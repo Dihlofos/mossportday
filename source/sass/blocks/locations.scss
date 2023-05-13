@@ -9,13 +9,11 @@
 
   @media (max-width: $tablet) {
     padding: 97px 0 0;
-
   }
 
 
   @media (max-width: $mobile) {
-    padding: 84px 0 0;
-    margin: 0 0 -190px;
+    padding: 75px 0 129px;
   }
 
   &__title {
@@ -26,7 +24,7 @@
     }
 
     @media (max-width: $mobile) {
-      margin: 0;
+      margin: 0 0 46px;
     }
   }
 
@@ -62,17 +60,15 @@
       display: flex;
     }
 
-    &::-webkit-scrollbar {
-      -webkit-appearance: none;
-      width: 0;
-      height: 0;
-      display: none;
-    }
-
 
     @media (max-width: $tablet) {
       padding: 0 24px;
       gap: 23px;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 0 16px;
+      gap: 16px;
     }
   }
 
@@ -81,11 +77,15 @@
     width: 32rem;
     height: 42.8rem;
 
-
     @media (max-width: $tablet) {
-
       width: calc(50% - 12px);
       height: 348px;
+    }
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      min-height: 313px;
+      height: auto;
     }
   }
 
@@ -133,9 +133,11 @@
 
       p {
         margin: 0 0 20px;
-
       }
+    }
 
+    @media (max-width: $mobile) {
+      font-size: 36px;
     }
   }
 
@@ -143,14 +145,23 @@
     @media (max-width: $tablet) {
       font-size: 22px;
     }
+
+    @media (max-width: $mobile) {
+      font-size: 19px;
+    }
   }
 
   &__block-description {
     font-size: 1.9rem;
     line-height: 1.45;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       font-size: 20px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 13px;
+      margin: 0 0 16px;
     }
   }
 
@@ -163,6 +174,10 @@
 
     @media (max-width: $tablet) {
       margin: 0 0 65px;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 0 0 53px;
     }
   }
 
@@ -177,7 +192,7 @@
     color: $red;
     padding: 0.5rem 2.6rem;
     font-family: $mossport;
-    font-size: 4.2rem;
+    font-size: 3.2rem;
     line-height: .8;
     text-transform: uppercase;
     text-align: center;
@@ -198,6 +213,15 @@
     @media (max-width: $tablet) {
       font-size: 33px;
       line-height: 1;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 23px;
+      height: 57px;
     }
   }
 
@@ -228,6 +252,16 @@
       }
 
     }
+
+    @media (max-width: $mobile) {
+      width: 41px;
+
+      img {
+        width: auto;
+        height: 57px;
+      }
+
+    }
   }
 
   &__decor-left {
@@ -251,10 +285,18 @@
 
     @media (max-width: $tablet) {
       position: absolute;
+      top: auto;
       right: -171px;
       bottom: -155px;
       width: 528px;
       height: auto;
+    }
+
+    @media (max-width: $mobile) {
+      bottom: -218px;
+      right: -66px;
+      width: 287px;
+      height: 221px;
     }
   }
 

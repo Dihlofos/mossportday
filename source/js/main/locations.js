@@ -14,6 +14,23 @@
     loop: false,
     allowTouchMove: false,
     slideToClickedSlide: false,
+    on: {
+      slideChange: function (e) {
+        const vw = window.innerWidth;
+
+        if (vw > 743) {
+          return;
+        }
+
+        const currentSlide = e.slides[e.realIndex];
+
+        if (!currentSlide) return;
+
+        const locationNumber = currentSlide.dataset.thumbIndex;
+
+        toggleContent(locationNumber);
+      },
+    },
 
     navigation: {
       nextEl: ".swiper__next",
@@ -21,10 +38,12 @@
     },
     breakpoints: {
       320: {
-        slidesPerView: 2,
-        spaceBetween: 0,
+        slidesPerView: 1,
+        spaceBetween: 16,
         draggable: true,
         allowTouchMove: true,
+        centeredSlides: true,
+
       },
 
       744: {
@@ -43,6 +62,7 @@
   });
 
   const map = document.querySelector('.js-map');
+  const mapScroller = document.querySelector('.js-map-scroll');
   const mapModal = document.querySelector('.js-map-modal');
   const modalText = mapModal.querySelector('.js-map-modal-text');
   const modalGoTo = mapModal.querySelector('.js-map-modal-goto');
@@ -81,6 +101,8 @@
   }
 
   // ACTIONS
+
+  console.log(mapScroller.scroll(272, 0));
 
   figures.forEach((figure) => {
     figure.addEventListener('click', () => {
@@ -150,14 +172,16 @@
     toggleContent(locationNumber);
     closeModal();
 
+    console.log('getSlideIndex(locationNumber)', getSlideIndex(locationNumber))
+
     swiperSlider.slideTo(getSlideIndex(locationNumber));
     // добавить скролл
   }
 
   function getSlideIndex(locationNumber) {
     const element = document.querySelector(`.js-thumb[data-thumb-index="${locationNumber}"]`);
-    const elIndex = Array.from(element.parentNode.children).indexOf(element)
-    return Number(elIndex) > 3 ? Number(elIndex) - 2 : 0;
+    const elIndex = Array.from(element.parentNode.children).indexOf(element);
+    return Number(elIndex);
   }
 
 
