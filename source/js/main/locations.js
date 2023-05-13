@@ -101,6 +101,7 @@
   }
 
   // ACTIONS
+  mapScroller?.scroll({left: 275})
 
   figures.forEach((figure) => {
     figure.addEventListener('click', () => {
@@ -175,12 +176,12 @@
   function onGoToLocation(locationNumber) {
 
     if (locationNumber === '30') return;
-
     toggleContent(locationNumber);
     closeModal();
 
 
     swiperSlider.slideTo(getSlideIndex(locationNumber));
+    // добавить скролл
   }
 
   function getSlideIndex(locationNumber) {

@@ -127,7 +127,7 @@
     justify-content: space-between;
 
     @media (max-width: $tablet) {
-      width: 60%;
+      width: 80%;
     }
 
     @media (max-width: $mobile) {
@@ -141,6 +141,7 @@
     justify-content: space-between;
     flex-shrink: 0;
     align-items: flex-start;
+    flex-wrap: wrap;
 
     span {
       display: block;
@@ -150,7 +151,7 @@
     }
 
     a {
-      font-size: 2.85rem;
+      font-size: 2.4rem;
       line-height: 3.8rem;
     }
 
@@ -161,7 +162,7 @@
       }
 
       a {
-        font-size: 29px;
+        font-size: 23px;
         line-height: 45px;
       }
     }
@@ -172,8 +173,8 @@
         line-height: 14px;
       }
       a {
-        font-size: 22px;
-        line-height: 43px;
+        font-size: 14px;
+        line-height: 26px;
       }
     }
 
