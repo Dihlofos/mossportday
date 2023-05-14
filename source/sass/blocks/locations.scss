@@ -78,6 +78,15 @@
     &.is-active {
       display: flex;
     }
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      padding: 0 24px;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 0 16px;
+    }
   }
 
   &__text-content {
@@ -93,6 +102,15 @@
       margin: 0 0 2rem;
     }
 
+    @media (max-width: $tablet) {
+      padding: 0;
+      width: auto;
+
+      p {
+        margin: 0 0 20px;
+      }
+    }
+
   }
 
   &__block {
@@ -102,7 +120,7 @@
 
     @media (max-width: $tablet) {
       width: calc(50% - 12px);
-      height: 348px;
+      min-height: 348px;
     }
 
     @media (max-width: $mobile) {
@@ -128,6 +146,10 @@
 
     @media (max-width: $tablet) {
       padding: 35px;
+
+      .button {
+        max-width: 100%;
+      }
 
     }
 
@@ -193,6 +215,7 @@
 
     @media (max-width: $tablet) {
       font-size: 20px;
+      margin: 0 0 10px;
     }
 
     @media (max-width: $mobile) {
@@ -253,6 +276,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      &:hover {
+        background-color: transparent;
+        color: $red;
+      }
+
+      &.is-active {
+        background-color: $red;
+        color: $white;
+      }
     }
 
     @media (max-width: $mobile) {

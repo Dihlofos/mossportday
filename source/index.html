@@ -298,7 +298,7 @@
             <img src="img/locations/right.svg" alt="" class="locations__decor-right" width="712" height="547">
             <img src="img/locations/bottom.svg" alt="" class="locations__decor-bottom" width="858" height="812">
             <!--ВЕЛКОМ-->
-            <div class="locations__blocks-content js-content" data-content-index="1">
+            <div class="locations__blocks-content js-content is-active" data-content-index="1">
               <div class="locations__text-content">
                 <p>Зона с&nbsp;волонтерами, которые будут встречать гостей праздника и&nbsp;предоставлять информацию о&nbsp;мероприятии, а&nbsp;так&nbsp;же это место регистрации на&nbsp;квест &laquo;Впиши себя в&nbsp;историю&raquo;:</p>
                 <p>Каждый желающий сможет получить буклет для фишек, которые будут выдаваться за&nbsp;участие в&nbsp;активностях на&nbsp;разных спортивных площадках праздника. В&nbsp;качестве одной из&nbsp;активностей будет возможность поделиться своей историей на&nbsp;сайте 100.moscow.sport. Собрав определенное количество фишек участник сможет получить футболку с&nbsp;собственным спортивным лозунгом!</p>
@@ -1529,7 +1529,8 @@
               </li>
 
             </ul>
-            <div class="locations__blocks-content js-content is-active" data-content-index="22">
+            <!--полоса препятствий-->
+            <div class="locations__blocks-content js-content" data-content-index="22">
               <div class="locations__text-content">
                 <p>Полоса препятствий&nbsp;&mdash; могут принять участие все желающие вне зависимости от&nbsp;уровня физической подготовки и&nbsp;возраста.
                   Трасса будет подготовлена как для взрослых так и&nbsp;для детей. регистрируются и&nbsp;приходят
@@ -1552,190 +1553,346 @@
                 </div>
               </div>
             </div>
-
+            <!--Стронгмен-->
             <ul class="locations__blocks js-content" data-content-index="23">
               <li class="locations__block">
                 <div class="locations__block-card">
                   <div class="locations__block-card-top">
                     <div class="locations__block-title">
-                      <p>Турнир<br> по шахматам</p>
-                      <p class="locations__block-count">09:00 — 11:30</p>
+                      <p>Кубок мира по стронгмену</p>
+                      <p class="locations__block-count">12:00 — 17:00</p>
                     </div>
-                    <div class="locations__block-description">Описание короткое на&nbsp;одно-два предложения, чтобы описать суть мероприятия и&nbsp;рассказать почему стоит его посетить.</div>
+                    <div class="locations__block-description">Познакомьтесь с&nbsp;сильнейшими атлетами из&nbsp;8&nbsp;стран стран мира. И&nbsp;узнайте, кто станет победителем в&nbsp;этом году.</div>
                   </div>
                   <div class="locations__block-card-bottom">
-                    <a class="button locations__block-link" href="https://led.moscow.sport" target="_blank">
-                      Регистрация
+                    <a class="button button--free locations__block-link" >
+                      Вход свободный
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="locations__block">
+                <div class="locations__block-card">
+                  <div class="locations__block-card-top">
+                    <div class="locations__block-title">
+                      <p>Интерактивная программа по стронгмену</p>
+                      <p class="locations__block-count">14:00 — 15:00</p>
+                    </div>
+                    <div class="locations__block-description">Посмотрите, как атлеты поднимают максимальные тяжести и&nbsp;выполняют экстремальные силовые упражнения.</div>
+                  </div>
+                  <div class="locations__block-card-bottom">
+                    <a class="button button--free locations__block-link" >
+                      Вход свободный
                     </a>
                   </div>
                 </div>
               </li>
             </ul>
+            <!--Фитнес-->
             <ul class="locations__blocks js-content" data-content-index="24">
               <li class="locations__block">
                 <div class="locations__block-card">
                   <div class="locations__block-card-top">
                     <div class="locations__block-title">
-                      <p>Турнир<br> по шахматам</p>
-                      <p class="locations__block-count">09:00 — 11:30</p>
+                      <p>Тренировка по йоге</p>
+                      <p class="locations__block-count">12:00 — 15:00</p>
                     </div>
-                    <div class="locations__block-description">Описание короткое на&nbsp;одно-два предложения, чтобы описать суть мероприятия и&nbsp;рассказать почему стоит его посетить.</div>
+                    <div class="locations__block-description">Расслабьтесь после рабочей недели, изучите асаны, проработайте каждую мышцу тела.</div>
                   </div>
                   <div class="locations__block-card-bottom">
-                    <a class="button locations__block-link" href="https://led.moscow.sport" target="_blank">
-                      Регистрация
-                    </a>
+                    <div class="button locations__block-link dropdown js-dropdown">
+                      <button class="dropdown__trigger button js-dropdown-trigger">
+                        Выбрать время
+                        <svg width="19" height="19" role="img" aria-label="arrow">
+                          <use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+                        </svg>
+                      </button>
+                      <div class="dropdown__content">
+                        <ul class="dropdown__list">
+                          <li class="dropdown__item">
+                            <a href="https://day-moscow-sport.timepad.ru/event/2428058/" class="dropdown__link" target="_blank">
+                              12:00 – 12:30 Регистрация
+                            </a>
+                          </li>
+                          <li class="dropdown__item">
+                            <a href="https://day-moscow-sport.timepad.ru/event/2428059/" class="dropdown__link" target="_blank">
+                              14:30 – 15:00 Регистрация
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="locations__block">
+                <div class="locations__block-card">
+                  <div class="locations__block-card-top">
+                    <div class="locations__block-title">
+                      <p>Тренировка на мини-батуте</p>
+                      <p class="locations__block-count">12:30 — 15:30</p>
+                    </div>
+                    <div class="locations__block-description">Присоединяйтесь к&nbsp;прыжкам на&nbsp;батуте, чтобы научиться сжигать калории, улучшить физическую форму и&nbsp;настроение.</div>
+                  </div>
+                  <div class="locations__block-card-bottom">
+                    <div class="button locations__block-link dropdown js-dropdown">
+                      <button class="dropdown__trigger button js-dropdown-trigger">
+                        Выбрать время
+                        <svg width="19" height="19" role="img" aria-label="arrow">
+                          <use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+                        </svg>
+                      </button>
+                      <div class="dropdown__content">
+                        <ul class="dropdown__list">
+                          <li class="dropdown__item">
+                            <a href="https://day-moscow-sport.timepad.ru/event/2428061/" class="dropdown__link" target="_blank">
+                              12:30 – 13:00 Регистрация
+                            </a>
+                          </li>
+                          <li class="dropdown__item">
+                            <a href="https://day-moscow-sport.timepad.ru/event/2428062/" class="dropdown__link" target="_blank">
+                              15:00 – 15:30 Регистрация
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="locations__block">
+                <div class="locations__block-card">
+                  <div class="locations__block-card-top">
+                    <div class="locations__block-title">
+                      <p>Тренировка по&nbsp;стретчингу</p>
+                      <p class="locations__block-count">12:30 — 15:30</p>
+                    </div>
+                    <div class="locations__block-description">Продлевайте молодость с&nbsp;помощью тренировки по&nbsp;стретчингу вместе с&nbsp;профессиональным тренером.</div>
+                  </div>
+                  <div class="locations__block-card-bottom">
+                    <div class="button locations__block-link dropdown js-dropdown">
+                      <button class="dropdown__trigger button js-dropdown-trigger">
+                        Выбрать время
+                        <svg width="19" height="19" role="img" aria-label="arrow">
+                          <use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+                        </svg>
+                      </button>
+                      <div class="dropdown__content">
+                        <ul class="dropdown__list">
+                          <li class="dropdown__item">
+                            <a href="https://day-moscow-sport.timepad.ru/event/2428063/" class="dropdown__link" target="_blank">
+                              13:00 – 13:30 Регистрация
+                            </a>
+                          </li>
+                          <li class="dropdown__item">
+                            <a href="https://day-moscow-sport.timepad.ru/event/2428064/" class="dropdown__link" target="_blank">
+                              15:30 – 16:00 Регистрация
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="locations__block">
+                <div class="locations__block-card">
+                  <div class="locations__block-card-top">
+                    <div class="locations__block-title">
+                      <p>Тренировка по&nbsp;пилатесу</p>
+                      <p class="locations__block-count">13:30 — 16:30</p>
+                    </div>
+                    <div class="locations__block-description">Станьте гибкими, подтянутыми и&nbsp;здоровыми&nbsp;&mdash; выбирайте сбалансированную тренировку для любого уровня подготовки.</div>
+                  </div>
+                  <div class="locations__block-card-bottom">
+                    <div class="button locations__block-link dropdown js-dropdown">
+                      <button class="dropdown__trigger button js-dropdown-trigger">
+                        Выбрать время
+                        <svg width="19" height="19" role="img" aria-label="arrow">
+                          <use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+                        </svg>
+                      </button>
+                      <div class="dropdown__content">
+                        <ul class="dropdown__list">
+                          <li class="dropdown__item">
+                            <a href="https://day-moscow-sport.timepad.ru/event/2428065/" class="dropdown__link" target="_blank">
+                              13:30 – 14:00 Регистрация
+                            </a>
+                          </li>
+                          <li class="dropdown__item">
+                            <a href="https://day-moscow-sport.timepad.ru/event/2428069/" class="dropdown__link" target="_blank">
+                              16:00 – 16:30 Регистрация
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="locations__block">
+                <div class="locations__block-card">
+                  <div class="locations__block-card-top">
+                    <div class="locations__block-title">
+                      <p>Здоровая спина</p>
+                      <p class="locations__block-count">14:00 — 17:30</p>
+                    </div>
+                    <div class="locations__block-description">Поработайте над красивой осанкой, растяните позвоночник мягко и&nbsp;безопасно, снимите боль и&nbsp;зажимы.</div>
+                  </div>
+                  <div class="locations__block-card-bottom">
+                    <div class="button locations__block-link dropdown js-dropdown">
+                      <button class="dropdown__trigger button js-dropdown-trigger">
+                        Выбрать время
+                        <svg width="19" height="19" role="img" aria-label="arrow">
+                          <use xlink:href="img/sprite.svg#icon-arrow-full"></use>
+                        </svg>
+                      </button>
+                      <div class="dropdown__content">
+                        <ul class="dropdown__list">
+                          <li class="dropdown__item">
+                            <a href="https://day-moscow-sport.timepad.ru/event/2428071/" class="dropdown__link" target="_blank">
+                              14:00 – 14:30 Регистрация
+                            </a>
+                          </li>
+                          <li class="dropdown__item">
+                            <a href="https://day-moscow-sport.timepad.ru/event/2428070/" class="dropdown__link" target="_blank">
+                              16:30 – 17:00 Регистрация
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </li>
             </ul>
+            <!--пейнтбол и лазертаг-->
             <ul class="locations__blocks js-content" data-content-index="25">
               <li class="locations__block">
                 <div class="locations__block-card">
                   <div class="locations__block-card-top">
                     <div class="locations__block-title">
-                      <p>Турнир<br> по шахматам</p>
-                      <p class="locations__block-count">09:00 — 11:30</p>
+                      <p>Турнир<br>по пейнтболу</p>
+                      <p class="locations__block-count">12:00 — 17:00</p>
                     </div>
-                    <div class="locations__block-description">Описание короткое на&nbsp;одно-два предложения, чтобы описать суть мероприятия и&nbsp;рассказать почему стоит его посетить.</div>
+                    <div class="locations__block-description">Присоединяйтесь к&nbsp;динамичной игре и&nbsp;покажите свою меткость, ловкость и&nbsp;скорость реакции.</div>
                   </div>
                   <div class="locations__block-card-bottom">
-                    <a class="button locations__block-link" href="https://led.moscow.sport" target="_blank">
+                    <a class="button locations__block-link" href="https://day-moscow-sport.timepad.ru/event/2427897/" target="_blank">
+                      Регистрация
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="locations__block">
+                <div class="locations__block-card">
+                  <div class="locations__block-card-top">
+                    <div class="locations__block-title">
+                      <p>Турнир<br>по лазертагу</p>
+                      <p class="locations__block-count">12:00 — 17:00</p>
+                    </div>
+                    <div class="locations__block-description">Уверены, что половина успеха&nbsp;&mdash; это тактика и&nbsp;смекалка? Проверьте себя во&nbsp;время турнира по&nbsp;лазертагу.</div>
+                  </div>
+                  <div class="locations__block-card-bottom">
+                    <a class="button locations__block-link" href="https://day-moscow-sport.timepad.ru/event/2427898/" target="_blank">
                       Регистрация
                     </a>
                   </div>
                 </div>
               </li>
             </ul>
+            <!--медиа-футбол-->
             <ul class="locations__blocks js-content" data-content-index="26">
               <li class="locations__block">
                 <div class="locations__block-card">
                   <div class="locations__block-card-top">
                     <div class="locations__block-title">
-                      <p>Турнир<br> по шахматам</p>
-                      <p class="locations__block-count">09:00 — 11:30</p>
+                      <p>LIGA BLOGGERS MOSCOW SPORT DAY</p>
+                      <p class="locations__block-count">12:00 — 17:00</p>
                     </div>
-                    <div class="locations__block-description">Описание короткое на&nbsp;одно-два предложения, чтобы описать суть мероприятия и&nbsp;рассказать почему стоит его посетить.</div>
+                    <div class="locations__block-description">Как блогеры играют в&nbsp;футбол? Посмотрите во&nbsp;время турнира по&nbsp;медиафутболу и&nbsp;болейте за&nbsp;своих кумиров.</div>
                   </div>
                   <div class="locations__block-card-bottom">
-                    <a class="button locations__block-link" href="https://led.moscow.sport" target="_blank">
-                      Регистрация
+                    <a class="button button--free locations__block-link" >
+                      Вход свободный
                     </a>
                   </div>
                 </div>
               </li>
             </ul>
+            <!--Регби-->
             <ul class="locations__blocks js-content" data-content-index="27">
               <li class="locations__block">
                 <div class="locations__block-card">
                   <div class="locations__block-card-top">
                     <div class="locations__block-title">
-                      <p>Турнир<br> по шахматам</p>
-                      <p class="locations__block-count">09:00 — 11:30</p>
+                      <p>Мастер-класс по регби</p>
+                      <p class="locations__block-count">14:00 — 14:30</p>
                     </div>
-                    <div class="locations__block-description">Описание короткое на&nbsp;одно-два предложения, чтобы описать суть мероприятия и&nbsp;рассказать почему стоит его посетить.</div>
+                    <div class="locations__block-description">Научитесь держать знаменитый &laquo;мяч-дыню&raquo;, познакомьтесь с&nbsp;правилами игры и&nbsp;влейтесь в&nbsp;игровой процесс.</div>
                   </div>
                   <div class="locations__block-card-bottom">
-                    <a class="button locations__block-link" href="https://led.moscow.sport" target="_blank">
-                      Регистрация
+                    <a class="button button--free locations__block-link" >
+                      Вход свободный
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="locations__block">
+                <div class="locations__block-card">
+                  <div class="locations__block-card-top">
+                    <div class="locations__block-title">
+                      <p>Открытая тренировка по регби</p>
+                      <p class="locations__block-count">12:00 — 17:00</p>
+                    </div>
+                    <div class="locations__block-description">Хотите улучшить свои показатели в&nbsp;регби? Присоединяйтесь к&nbsp;открытой тренировке с&nbsp;профессиональным тренером.</div>
+                  </div>
+                  <div class="locations__block-card-bottom">
+                    <a class="button button--free locations__block-link" >
+                      Вход свободный
                     </a>
                   </div>
                 </div>
               </li>
             </ul>
+            <!--Стретчинг-->
             <ul class="locations__blocks js-content" data-content-index="28">
               <li class="locations__block">
                 <div class="locations__block-card">
                   <div class="locations__block-card-top">
                     <div class="locations__block-title">
-                      <p>Турнир<br> по шахматам</p>
-                      <p class="locations__block-count">09:00 — 11:30</p>
+                      <p>Массовая тренировка по стретчингу</p>
+                      <p class="locations__block-count">15:00 — 16:30</p>
                     </div>
-                    <div class="locations__block-description">Описание короткое на&nbsp;одно-два предложения, чтобы описать суть мероприятия и&nbsp;рассказать почему стоит его посетить.</div>
+                    <div class="locations__block-description">Улучшайте гибкость и&nbsp;координацию вместе с&nbsp;мастером спорта по&nbsp;художественной гимнастике Самирой Мустафаевой.</div>
                   </div>
                   <div class="locations__block-card-bottom">
-                    <a class="button locations__block-link" href="https://led.moscow.sport" target="_blank">
+                    <a class="button locations__block-link" href="https://day-moscow-sport.timepad.ru/event/2427890/" target="_blank">
                       Регистрация
                     </a>
                   </div>
                 </div>
               </li>
             </ul>
+            <!--Кино-->
             <ul class="locations__blocks js-content" data-content-index="29">
               <li class="locations__block">
                 <div class="locations__block-card">
                   <div class="locations__block-card-top">
                     <div class="locations__block-title">
-                      <p>Турнир по шахматам</p>
-                      <p class="locations__block-count">09:00 — 11:30</p>
+                      <p>Кинопоказ</p>
+                      <p class="locations__block-count">18:00 — 20:00</p>
                     </div>
-                    <div class="locations__block-description">Описание короткое на&nbsp;одно-два предложения, чтобы описать суть мероприятия и&nbsp;рассказать почему стоит его посетить.</div>
+                    <div class="locations__block-description">Присоединяйтесь к&nbsp;показу фильма про спорт и&nbsp;реальную жизнь и&nbsp;знакомьтесь со&nbsp;звездными гостями.</div>
                   </div>
                   <div class="locations__block-card-bottom">
-                    <div class="button locations__block-link dropdown js-dropdown">
-                      <button class="dropdown__trigger button js-dropdown-trigger">
-                        Выбрать время
-                        <svg width="19" height="19" role="img" aria-label="arrow">
-                          <use xlink:href="img/sprite.svg#icon-arrow-full"></use>
-                        </svg>
-                      </button>
-                      <div class="dropdown__content">
-                        <ul class="dropdown__list">
-                          <li class="dropdown__item">
-                            <a href="https://zima-moscow-sport.timepad.ru/event/2300371/" class="dropdown__link" target="_blank">
-                              18:30 – 19:30 Регистрация
-                            </a>
-                          </li>
-                          <li class="dropdown__item">
-                            <a href="https://zima-moscow-sport.timepad.ru/event/2300916/" class="dropdown__link" target="_blank">
-                              19:30 – 21:00 Регистрация
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
+                    <a class="button locations__block-link" href="https://day-moscow-sport.timepad.ru/event/2428074/" target="_blank">
+                      Регистрация
+                    </a>
                   </div>
                 </div>
               </li>
             </ul>
-            <ul class="locations__blocks js-content" data-content-index="30">
-              <li class="locations__block">
-                <div class="locations__block-card">
-                  <div class="locations__block-card-top">
-                    <div class="locations__block-title">
-                      <p>Турнир по шахматам</p>
-                      <p class="locations__block-count">09:00 — 11:30</p>
-                    </div>
-                    <div class="locations__block-description">Описание короткое на&nbsp;одно-два предложения, чтобы описать суть мероприятия и&nbsp;рассказать почему стоит его посетить.</div>
-                  </div>
-                  <div class="locations__block-card-bottom">
-                    <div class="button locations__block-link dropdown js-dropdown">
-                      <button class="dropdown__trigger button js-dropdown-trigger">
-                        Выбрать время
-                        <svg width="19" height="19" role="img" aria-label="arrow">
-                          <use xlink:href="img/sprite.svg#icon-arrow-full"></use>
-                        </svg>
-                      </button>
-                      <div class="dropdown__content">
-                        <ul class="dropdown__list">
-                          <li class="dropdown__item">
-                            <a href="https://zima-moscow-sport.timepad.ru/event/2300371/" class="dropdown__link" target="_blank">
-                              18:30 – 19:30 Регистрация
-                            </a>
-                          </li>
-                          <li class="dropdown__item">
-                            <a href="https://zima-moscow-sport.timepad.ru/event/2300916/" class="dropdown__link" target="_blank">
-                              19:30 – 21:00 Регистрация
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-
           </div>
         </section>
         <section class="concert">
