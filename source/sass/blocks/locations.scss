@@ -2,6 +2,27 @@
   position: relative;
   padding: 0.9rem 0 0;
 
+  &__temp-warning {
+    display: flex;
+    align-items: center;
+    font-size: 5rem;
+    line-height: 5rem;
+    color: $red;
+    font-family: $mossport;
+    text-transform: uppercase;
+    z-index: 1000;
+    color: $purple;
+    margin: 10rem 0 10rem;
+
+    @media (max-width: $tablet) {
+      margin: 70px 0 70px;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 40px 0 0;
+    }
+  }
+
   .container {
     position: relative;
   }
