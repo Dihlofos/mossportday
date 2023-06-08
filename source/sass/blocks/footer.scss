@@ -222,6 +222,19 @@
   &__logo {
     transition: 0.2s color ease-in;
 
+    img {
+      width: auto;
+      height: 64px;
+
+      @media (max-width: $tablet) {
+        height: 70px;
+      }
+
+      @media (max-width: $tablet) {
+        height: 60px;
+      }
+    }
+
     svg {
       fill: currentColor;
     }

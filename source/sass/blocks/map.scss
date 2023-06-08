@@ -93,6 +93,10 @@
             stroke: $white;
           }
 
+          path {
+            fill: $white;
+          }
+
 
         }
       }
@@ -209,6 +213,10 @@
 
   &__modal-goto {
     cursor: pointer;
+
+    &.is-hidden {
+      display: none;
+    }
 
     @media (max-width: $mobile) {
       font-size: 31px;

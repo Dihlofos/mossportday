@@ -27,6 +27,7 @@
       top: 18.5rem;
       width: 43.7rem;
       height: 42.5rem;
+      z-index: 1;
 
       @media (max-width: $laptop) {
         left: -23rem;
@@ -43,6 +44,7 @@
       top: 15rem;
       width: 81.2rem;
       height: 67.1rem;
+      z-index: 1;
 
       @media (max-width: $tablet) {
         position: absolute;
@@ -97,11 +99,13 @@
     }
 
     &__logos {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 5rem;
       padding: 0 3rem 4rem 0;
+      z-index: 5;
     }
 
     &__organizators {

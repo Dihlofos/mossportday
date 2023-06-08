@@ -9,6 +9,10 @@
     cursor: pointer;
     display: none;
 
+    svg {
+      width: 100%;
+    }
+
     &:hover {
       svg {
         fill: $purple;
