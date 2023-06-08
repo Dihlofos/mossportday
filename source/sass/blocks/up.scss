@@ -4,14 +4,11 @@
     color: $white;
     bottom: 5rem;
     right: 9.3rem;
-    width: 3.3rem;
-    height: 3.3rem;
+    width: 5rem;
+    height: 5rem;
     cursor: pointer;
     display: none;
 
-    svg {
-      width: 100%;
-    }
 
     &:hover {
       svg {
@@ -25,7 +22,6 @@
 
     & svg {
       transition: 0.3s ease-in-out;
-      transform: rotate(270deg);
       fill: $white;
     }
 
