@@ -139,22 +139,25 @@
     '20' : 'Паркур и Трикинг',
     '21' : 'Фехтование',
     '22' : 'Полоса препятствий',
-    '23' : 'Стронгмен',
-    '24' : 'Фитнес',
-    '25' : 'Луктаг и Лазертаг',
-    '26' : 'Сайклинг',
-    '27' : 'Медиа-футбол',
-    '28' : 'Регби',
-    '29' : 'Стретчинг',
-    '30' : 'Футбольный матч',
-    '31' : 'Кино',
-    '32' : 'Фан',
-    '33' : 'Концерт',
-    '34' : 'Кроссфит'
+    '23' : 'Кроссфит',
+    '24' : 'Стронгмен',
+    '25' : 'Фитнес',
+    '26' : 'Луктаг и Лазертаг',
+    '27' : 'Сайклинг',
+    '28' : 'Медиа-футбол',
+    '29' : 'Регби',
+    '30' : 'Стретчинг',
+    '31' : 'Футбольный матч',
+    '32' : 'Кино',
+    '33' : 'Фан',
+    '34' : 'Зоны футбольных клубов',
+    '35' : 'Концерт',
   }
 
   // 32 убрать, когда заработает.
-  const numbersWithoutAction = ['2','3','4','17','32']
+  const numbersWithoutAction = ['2','3','4','17','33','34']
+
+  const concertNumber = '35';
   // ACTIONS
   mapScroller?.scroll({left: 275})
 
@@ -190,7 +193,7 @@
     modalGoTo.classList.remove('is-hidden');
     const locationNumber = figure.classList[1];
 
-    if (locationNumber === '33') {
+    if (locationNumber === concertNumber) {
       modalGoTo.href = '#concert';
     } else {
       modalGoTo.href = '#locations';
@@ -235,7 +238,7 @@
 
   function onGoToLocation(locationNumber) {
 
-    if (locationNumber === '30') return;
+    if (locationNumber === concertNumber) return;
     toggleContent(locationNumber);
     closeModal();
 

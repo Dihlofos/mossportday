@@ -49,6 +49,7 @@
   }
 
   &__blocks-container {
+
     &.container {
       padding: 0 0 19.2rem;
     }
@@ -94,7 +95,13 @@
 
   &__blocks-content {
     display: none;
+
     gap: 2rem;
+
+    &--center {
+      justify-content: center;
+      align-items: flex-start;
+    }
 
     &.is-active {
       display: flex;
