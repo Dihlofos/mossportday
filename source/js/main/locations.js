@@ -109,7 +109,7 @@
   }
 
   // 32 убрать, когда заработает.
-  const numbersWithoutAction = ['2','3','4','17','33', '31', '34']
+  const numbersWithoutAction = ['2','3','4','17','33', '31', '34', '14', '23', '25']
 
   const concertNumber = '35';
   // ACTIONS
