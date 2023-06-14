@@ -150,6 +150,13 @@
       min-height: auto;
     }
 
+    &--text {
+      font-size: 3.6rem;
+      line-height: 1.2;
+      font-family: $mossport;
+      text-transform: uppercase;
+    }
+
     @media (max-width: $tablet) {
       width: calc(50% - 12px);
       min-height: 348px;
