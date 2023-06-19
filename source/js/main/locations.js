@@ -141,7 +141,17 @@
   });
 
 
+  init();
+
+
   // FUNCTIONS
+
+  function init() {
+    const locationNumber = findGetParameter('locationId');
+    if (locationNumber) {
+      onGoToLocation(locationNumber);
+    }
+  }
 
   function onFigureClick(figure) {
     modalGoTo.classList.remove('is-hidden');
@@ -191,6 +201,9 @@
   }
 
   function onGoToLocation(locationNumber) {
+    if (numbersWithoutAction.includes(locationNumber))  {
+      return;
+    }
 
     if (locationNumber === concertNumber) return;
     toggleContent(locationNumber);
@@ -209,6 +222,10 @@
 
 
   function toggleContent(locationNumber) {
+
+
+    insertUrlParam('locationId', locationNumber);
+
     contentsEls.forEach((item) => {
       const contentIndex = item.dataset.contentIndex;
       if (Number(contentIndex) === Number(locationNumber)) {
@@ -228,8 +245,37 @@
     });
   };
 
+  function insertUrlParam(key, value) {
+    if (history.pushState) {
+      let searchParams = new URLSearchParams(window.location.search);
+      searchParams.set(key, value);
+      console.log(window.location);
+      let newurl = window.location.protocol + "//" + window.location.host + window.location.pathname  + '?' + searchParams.toString() + window.location.hash;
+      window.history.pushState({path: newurl}, '', newurl);
+    }
+  }
+
+  function removeUrlParameter(paramKey) {
+    const url = window.location.href
+    var r = new URL(url)
+    r.searchParams.delete(paramKey)
+    const newUrl = r.href
+    window.history.pushState({ path: newUrl }, '', newUrl)
+  }
 
 
+  function findGetParameter(parameterName) {
+    var result = null,
+        tmp = [];
+    location.search
+        .substr(1)
+        .split("&")
+        .forEach(function (item) {
+          tmp = item.split("=");
+          if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+        });
+    return result;
+}
 
 
 
