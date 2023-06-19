@@ -222,10 +222,6 @@
 
 
   function toggleContent(locationNumber) {
-
-
-    insertUrlParam('locationId', locationNumber);
-
     contentsEls.forEach((item) => {
       const contentIndex = item.dataset.contentIndex;
       if (Number(contentIndex) === Number(locationNumber)) {
