@@ -78,9 +78,9 @@
     '5': 'Спортивная зона челленджей',
     '6': 'Фестиваль городских видов спорта',
     '7': 'Шахматы',
-    '8': 'МИНИ-ФУТБОЛ',
+    '8': 'Мини-футбол',
     '9': 'Детская зона',
-    '10': 'ЛЕГКАЯ АТЛЕТИКА',
+    '10': 'Легкая атлетика',
     '11': 'Брейк-данс',
     '12' : 'Фигурное катание',
     '13' : 'Стритбол',
@@ -103,7 +103,7 @@
     '30' : 'Стретчинг',
     '31' : 'Футбольный матч',
     '32' : 'Кино',
-    '33' : 'ФАН-ВСТРЕЧИ',
+    '33' : 'Фан-встречи',
     '34' : 'Зоны футбольных клубов',
     '35' : 'Концерт',
   }
@@ -151,11 +151,16 @@
     if (locationNumber) {
       onGoToLocation(locationNumber);
     }
+
+    // Собираем легенду.
+    fillLegendList();
   }
 
   function onFigureClick(figure) {
     modalGoTo.classList.remove('is-hidden');
     const locationNumber = figure.classList[1];
+
+    const legendItem = document.querySelector(`.js-legend-item[data-legend-item-id="${locationNumber}"]`);
 
     if (locationNumber === concertNumber) {
       modalGoTo.href = '#concert';
@@ -169,17 +174,27 @@
 
     if (figure.classList.contains('is-active')) {
       resetFigures();
+      resetLegends();
       closeModal(locationNumber);
     } else {
       resetFigures();
+      resetLegends();
       figure.classList.add('is-active');
       openModal(locationNumber);
+      legendItem.classList.add('is-active');
     }
   }
 
   function resetFigures() {
     figures.forEach((figure) => {
       figure.classList.remove('is-active');
+    })
+  }
+
+  function resetLegends() {
+    const legends = document.querySelectorAll('.js-legend-item');
+    legends.forEach((legend) => {
+      legend.classList.remove('is-active');
     })
   }
 
@@ -198,6 +213,7 @@
       modalGoTo.dataset.locationNumber = '';
     }, 300)
     resetFigures();
+    resetLegends();
   }
 
   function onGoToLocation(locationNumber) {
@@ -241,24 +257,6 @@
     });
   };
 
-  function insertUrlParam(key, value) {
-    if (history.pushState) {
-      let searchParams = new URLSearchParams(window.location.search);
-      searchParams.set(key, value);
-      console.log(window.location);
-      let newurl = window.location.protocol + "//" + window.location.host + window.location.pathname  + '?' + searchParams.toString() + window.location.hash;
-      window.history.pushState({path: newurl}, '', newurl);
-    }
-  }
-
-  function removeUrlParameter(paramKey) {
-    const url = window.location.href
-    var r = new URL(url)
-    r.searchParams.delete(paramKey)
-    const newUrl = r.href
-    window.history.pushState({ path: newUrl }, '', newUrl)
-  }
-
 
   function findGetParameter(parameterName) {
     var result = null,
@@ -271,6 +269,41 @@
           if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
         });
     return result;
+}
+
+
+
+function fillLegendList() {
+  const container = document.querySelector('.js-legend-list');
+  const locationsArray = Object.entries(locations);
+
+  locationsArray.forEach(([index,value]) => {
+    const figure = document.getElementById(`figure ${index}`);
+
+    // не показываем локации, которых нет на карте.
+    if (!figure) return;
+
+    const itemLi = document.createElement('li');
+    const itemSpan = document.createElement('span');
+    const itemP = document.createElement('p');
+
+    itemLi.classList.add('map__list-item');
+    itemLi.classList.add('js-legend-item');
+    itemLi.dataset['legendItemId'] = index;
+
+    itemLi.addEventListener('click', function() {
+      onFigureClick(figure);
+    })
+
+    itemSpan.textContent = `${index}.`
+    itemP.textContent = value;
+    itemLi.append(itemSpan);
+    itemLi.append(itemP);
+    container.append(itemLi);
+  })
+
+
+
 }
 
 

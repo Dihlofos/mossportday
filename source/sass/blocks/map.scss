@@ -31,7 +31,7 @@
     position: relative;
     width: 136%;
     max-width: 179.6rem;
-    margin-left: 11.8rem;
+    margin-left: 37.5rem;
     margin-top: -9.3rem;
 
     @media (max-width: $tablet) {
@@ -140,8 +140,8 @@
 
   &__modal {
     position: absolute;
-    top: 21rem;
-    left: 35rem;
+    top: 11rem;
+    left: 22rem;
     z-index: 6;
     width: 37.2rem;
     background-color: $purple;
@@ -232,6 +232,65 @@
       top: -70px;
       left: -67px;
       display: block;
+    }
+  }
+
+  &__wrapper {
+    position: relative  ;
+    display: flex;
+
+  }
+
+  &__list {
+    z-index: 100;
+    list-style: none;
+    padding: 4.5rem 0 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    column-count: 2;
+    column-fill: auto;
+    column-gap: 4rem
+
+  }
+
+  &__list-item {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    color: $black;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-family: $mossport;
+    text-transform: uppercase;
+    padding-left: 3rem;
+    height: 3rem;
+    margin: 0 0 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $red;
+    }
+
+    &.is-active {
+      color: $red;
+    }
+
+    p {
+      margin: 0;
+      position: relative;
+      top: 0.5rem;
+    }
+
+    span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 3.4rem;
+      color: $red
     }
   }
 }
