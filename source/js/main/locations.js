@@ -101,7 +101,7 @@
     '28' : 'Медиа-футбол',
     '29' : 'Регби',
     '30' : 'Стретчинг',
-    '31' : 'Футбольный матч',
+    '31' : 'Финал медийной футбольной лиги',
     '32' : 'Кино',
     '33' : 'ФАН-ВСТРЕЧИ',
     '34' : 'Зоны футбольных клубов',
@@ -109,10 +109,11 @@
   }
 
   // 32 убрать, когда заработает.
-  const numbersWithoutAction = ['2','3','4','17','33', '31', '34', '14', '23']
+  const numbersWithoutAction = ['2','3','4','17','33', '31',  '14', '23']
 
   const concertNumber = '35';
   const artObject = '2';
+  const footballNumber = '34';
   // ACTIONS
   mapScroller?.scroll({left: 275})
 
@@ -171,6 +172,12 @@
     } else {
       modalGoTo.href = '#locations';
     }
+
+    if (locationNumber === footballNumber) {
+      modalGoTo.href = 'https://mfl.life/';
+    }
+
+
     if (numbersWithoutAction.includes(locationNumber)) {
       modalGoTo.classList.add('is-hidden');
     }

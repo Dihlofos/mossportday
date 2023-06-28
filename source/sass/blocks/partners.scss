@@ -126,11 +126,11 @@
 
     &__partners {
       position: relative;
-      margin: 0 0 11.9rem;
+      // margin: 0 0 11.9rem;
 
-      @media (max-width: $mobile) {
-        margin: 0 0 167px;
-      }
+      // @media (max-width: $mobile) {
+      //   margin: 0 0 167px;
+      // }
 
       .partners__title {
         margin: 0 0 15rem;
