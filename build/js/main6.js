@@ -206,6 +206,8 @@
     modalGoTo.classList.remove('is-hidden');
     const locationNumber = figure.classList[1];
 
+    const mapOffset = document.getElementById('map').getBoundingClientRect().top + document.documentElement.scrollTop
+
     const legendItem = document.querySelector(`.js-legend-item[data-legend-item-id="${locationNumber}"]`);
 
     if (locationNumber === concertNumber) {
@@ -216,6 +218,8 @@
     if (numbersWithoutAction.includes(locationNumber)) {
       modalGoTo.classList.add('is-hidden');
     }
+
+    window.scroll.animateScroll(mapOffset)
 
 
     if (figure.classList.contains('is-active')) {
