@@ -10,7 +10,9 @@
     }
 
     &__title {
+      position: relative;
       margin: 0 0 13.2rem;
+      z-index: 5;
 
       @media (max-width: $tablet) {
         margin: 0 0 54px;
@@ -110,15 +112,15 @@
 
     &__organizators {
 
-      margin: 0 0 8rem;
+      margin: 0 0 18rem;
 
       @media (max-width: $tablet) {
-       // margin: 0 0 80px;
+       margin: 0 0 80px;
       }
 
 
       @media (max-width: $mobile) {
-          // margin: 0 0 141px;
+          margin: 0 0 141px;
         }
     }
 

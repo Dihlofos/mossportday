@@ -158,6 +158,7 @@
   const numbersWithoutAction = ['2','3','4','17','33', '31', '34', '14', '23']
 
   const concertNumber = '35';
+  const artObject = '2';
   // ACTIONS
   mapScroller?.scroll({left: 275})
 
@@ -194,9 +195,17 @@
 
   function init() {
     const locationNumber = findGetParameter('locationId');
+    const artObjectLinks = document.querySelectorAll('.js-art-object-link');
     if (locationNumber) {
       onGoToLocation(locationNumber);
     }
+    artObjectLinks.forEach((link) => {
+      link.addEventListener('click', ()=>{
+        const figure = document.getElementById(`figure ${artObject}`);
+        onFigureClick(figure);
+      })
+    })
+
   }
 
   function onFigureClick(figure) {
