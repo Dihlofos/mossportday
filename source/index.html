@@ -102,11 +102,11 @@
                   >Локации</a
                 >
               </li>
-              <!-- <li class="nav__item">
+              <li class="nav__item">
                 <a class="nav__link js-scroll" data-scroll href="#concert"
                   >Концерт</a
                 >
-              </li> -->
+              </li>
              <li class="nav__item">
                 <a class="nav__link js-scroll" data-scroll href="#map"
                   >Карта</a
@@ -159,11 +159,11 @@
                     >Локации</a
                   >
                 </li>
-                <!-- <li class="nav__item">
+                <li class="nav__item">
                   <a class="nav__link js-scroll" data-scroll href="#concert"
                     >Концерт</a
                   >
-                </li> -->
+                </li>
                 <li class="nav__item">
                   <a class="nav__link js-scroll" data-scroll href="#map"
                     >Карта</a
@@ -2269,50 +2269,39 @@
 
           </div>
         </section>
-        <section class="concert" style="display: none;">
+        <section class="concert">
           <div class="container">
+            <img class="concert__decor concert__decor--desktop" src="img/concert/decor.svg" alt="" width="1132" height="982">
+            <img class="concert__decor concert__decor--mobile" src="img/concert/decor-mobile.svg" alt="" width="133" height="187">
             <h2 class="concert__title title title--white" id="concert">концерт</h2>
-            <p class="concert__description">
-              Небольшое описание концертной программы с информацией об участниках, времени и месте проведения.
-            </p>
-            <ul class="concert__list">
-              <li class="concert__item">
-                <img src="img/concert/bilan.png" alt="" width="255" height="255">
-                <p>Дима Билан</p>
-              </li>
-              <li class="concert__item">
-                <img src="img/concert/mot.png" alt="" width="255" height="255">
-                <p>Мот</p>
-              </li>
-              <li class="concert__item">
-                <img src="img/concert/iowa.png" alt="" width="255" height="255">
-                <p>IOWA</p>
-              </li>
-              <li class="concert__item">
-                <img src="img/concert/elka.png" alt="" width="255" height="255">
-                <p>Ёлка</p>
-              </li>
-              <li class="concert__item">
-                <img src="img/concert/seryab.png" alt="" width="255" height="255">
-                <p>Ольга Серябкина</p>
-              </li>
-              <li class="concert__item">
-                <img src="img/concert/chebot.png" alt="" width="255" height="255">
-                <p>Люся чеботина</p>
-              </li>
-              <li class="concert__item">
-                <img src="img/concert/burito.png" alt="" width="255" height="255">
-                <p>Burito</p>
-              </li>
-              <li class="concert__item">
-                <img src="img/concert/bianka.png" alt="" width="255" height="255">
-                <p>Бьянка</p>
-              </li>
-              <li class="concert__item">
-                <img src="img/concert/vintage.png" alt="" width="255" height="255">
-                <p>Винтаж</p>
-              </li>
-            </ul>
+            <div class="concert__wrapper">
+              <p class="concert__time">
+                <img class="concert__time-decor concert__time-decor--desktop" src="img/concert/time-frame.svg" alt="" width="368" height="92">
+                <img class="concert__time-decor concert__time-decor--mobile" src="img/concert/time-frame-mobile.svg" alt="" width="258" height="125">
+                <span class="desktop">15:00 — 21:00&nbsp;Вход свободный</span>
+                <span class="mobile">15:00 — 21:00<br/>Вход свободный</span>
+              </p>
+              <div class="concert__content">
+                <p>Грандиозный летний опенэйр соберет самых актуальных артистов страны.</p>
+                <p>Задавать настроение на сцене будут звезды, чьи имена украсят афишу любого фестиваля — </p>
+                <p class="concert__big-text"> DJ Smash, группа Pizza, Леша Свик, Chebanov, Рита Дакота, группа Rasa, Бьянка, ST, Ольга Серябкина, Анатолий Цой, Loc Dog, Эльвира T, Гречанник, Акмаль, Лина Ли, Guma, Антон Токарев, Gazan, Konfuz, Анет Сай, Artur, To Ma, NLO.</p>
+                <p>Не пропустите! Только суперхиты и суперновинки, под которые хочется зажигать!</p>
+              </div>
+              <ul class="concert__list">
+                <li class="concert__item">
+                  <img src="img/concert/chebotina.png" alt="" width="342" height="266">
+                  <p>Люся чеботина</p>
+                </li>
+                <li class="concert__item">
+                  <img src="img/concert/lazarev.png" alt="" width="342" height="266">
+                  <p>Сергей Лазарев</p>
+                </li>
+                <li class="concert__item">
+                  <img src="img/concert/feduk.png" alt="" width="342" height="266">
+                  <p>FEDUK</p>
+                </li>
+              </ul>
+            </div>
           </div>
 
         </section>
