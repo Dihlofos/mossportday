@@ -126,6 +126,10 @@
 
     &__partners {
       position: relative;
+
+      .partners__logos {
+        justify-content: space-around;
+      }
       // margin: 0 0 11.9rem;
 
       // @media (max-width: $mobile) {
