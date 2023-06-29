@@ -129,12 +129,13 @@
 
       .partners__logos {
         justify-content: space-around;
+        flex-wrap: wrap;
       }
-      // margin: 0 0 11.9rem;
+      margin: 0 0 11.9rem;
 
-      // @media (max-width: $mobile) {
-      //   margin: 0 0 167px;
-      // }
+      @media (max-width: $mobile) {
+        margin: 0 0 167px;
+      }
 
       .partners__title {
         margin: 0 0 15rem;
@@ -151,6 +152,12 @@
 
     &__info {
       position: relative;
+
+      .partners__logos {
+        flex-wrap: wrap;
+        gap: 20rem;
+      }
+
       .partners__title {
         margin: 0 0 9.5rem;
 
