@@ -155,7 +155,7 @@
   }
 
   // 32 убрать, когда заработает.
-  const numbersWithoutAction = ['2','3','4','17','33', '34', '14', '23']
+  const numbersWithoutAction = ['2','3','4','17', '34', '14', '23']
 
   const concertNumber = '35';
   const artObject = '2';
