@@ -126,12 +126,18 @@
 
     &__partners {
       position: relative;
+      margin: 0 0 11.9rem;
 
       .partners__logos {
         justify-content: space-around;
         flex-wrap: wrap;
+
+        @media (max-width: $mobile) {
+          flex-direction: column;
+        }
       }
-      margin: 0 0 11.9rem;
+
+
 
       @media (max-width: $mobile) {
         margin: 0 0 167px;
@@ -148,6 +154,7 @@
           margin: 0 0 77px;
         }
       }
+
     }
 
     &__info {
