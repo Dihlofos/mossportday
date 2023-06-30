@@ -31,8 +31,14 @@
     position: relative;
     width: 136%;
     max-width: 179.6rem;
-    margin-left: 37.5rem;
+    margin-left: 25%;
     margin-top: -9.3rem;
+
+    @media (max-width: 1680px) {
+      width: 123%;
+      margin-top: 0;
+    }
+
 
     @media (max-width: $tablet) {
       margin: 0;
@@ -142,7 +148,7 @@
     position: absolute;
     top: 11rem;
     left: 22rem;
-    z-index: 6;
+    z-index: 115;
     width: 37.2rem;
     background-color: $purple;
     color: $white;
@@ -254,6 +260,12 @@
     column-count: 2;
     column-fill: auto;
     column-gap: 4rem;
+
+    @media (max-width: $tablet) {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
   }
 
   &__list-item {

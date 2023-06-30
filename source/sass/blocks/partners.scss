@@ -10,7 +10,9 @@
     }
 
     &__title {
+      position: relative;
       margin: 0 0 13.2rem;
+      z-index: 5;
 
       @media (max-width: $tablet) {
         margin: 0 0 54px;
@@ -62,7 +64,7 @@
 
     &__right-bottom-decor {
       position: absolute;
-      right: -29rem;
+      right: -45rem;
       top: 24rem;
       width: 59rem;
       height: 61.4rem;
@@ -110,21 +112,32 @@
 
     &__organizators {
 
-      margin: 0 0 8rem;
+      margin: 0 0 18rem;
 
       @media (max-width: $tablet) {
-       // margin: 0 0 80px;
+       margin: 0 0 80px;
       }
 
 
       @media (max-width: $mobile) {
-          // margin: 0 0 141px;
+          margin: 0 0 141px;
         }
     }
 
     &__partners {
       position: relative;
       margin: 0 0 11.9rem;
+
+      .partners__logos {
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        @media (max-width: $mobile) {
+          flex-direction: column;
+        }
+      }
+
+
 
       @media (max-width: $mobile) {
         margin: 0 0 167px;
@@ -141,10 +154,17 @@
           margin: 0 0 77px;
         }
       }
+
     }
 
     &__info {
       position: relative;
+
+      .partners__logos {
+        flex-wrap: wrap;
+        gap: 20rem;
+      }
+
       .partners__title {
         margin: 0 0 9.5rem;
 
