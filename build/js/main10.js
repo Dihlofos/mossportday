@@ -122,7 +122,6 @@
     '3': 'Спортивная зона челленджей',
     '4': 'Детская зона',
     '5' : 'Фан-встречи',
-    '999': 'Ретроспектива-фотозоны',
     '6': 'Фестиваль городских видов спорта',
     '7' : 'Стронгмен',
     '8': 'Шахматы',
@@ -151,6 +150,13 @@
     '32' : 'Кино',
     '34' : 'Зоны футбольных клубов',
     '31' : 'Концерт',
+  }
+
+  // Функция для генерации
+  function getURls() {
+    Object.entries(locations).forEach(([index, value]) => {
+      console.log(value, `https://day.moscow.sport/?locationId=${index}#locations`);
+    })
   }
 
   // 32 убрать, когда заработает.
@@ -372,8 +378,6 @@ function fillLegendList() {
     container.append(itemLi);
   })
 
-
-
 }
 
 
@@ -381,6 +385,9 @@ function fillLegendList() {
 
 
 })();
+
+
+
 
 "use strict";
 (function () {
