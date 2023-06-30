@@ -54,7 +54,16 @@
     }
   }
 
+  &__map-content {
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+  }
+
   &__map-wrapper {
+
     @media (max-width: $mobile) {
       overflow-x: auto;
       padding-top: 45px;
@@ -89,7 +98,7 @@
     // }
 
 
-      .figure {
+      g {
         cursor: pointer;
 
         &.is-active {
@@ -168,8 +177,8 @@
     @media (max-width: $tablet) {
       width: 372px;
       padding: 36px;
-      top: 101px;
-      left: 38px;
+      top: 8px;
+      left: 0;
     }
 
     @media (max-width: $mobile) {
@@ -233,7 +242,7 @@
   &__decor-mobile {
     display: none;
 
-    @media (max-width: $tablet) {
+    @media (max-width: $mobile) {
       position: absolute;
       top: -70px;
       left: -67px;
@@ -241,9 +250,14 @@
     }
   }
 
-  &__wrapper {
-    position: relative  ;
+  &__map-content {
+    position: relative;
     display: flex;
+
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
 
   }
 
@@ -264,7 +278,12 @@
     @media (max-width: $tablet) {
       position: relative;
       width: 100%;
+      height: 575px;
+    }
+
+    @media (max-width: $mobile) {
       height: auto;
+      column-count: 1;
     }
   }
 
@@ -280,6 +299,7 @@
     padding-left: 3rem;
     height: 3rem;
     margin: 0 0 0.5rem;
+    padding-left: 30px;
     cursor: pointer;
 
     &:hover {
@@ -302,6 +322,16 @@
       top: 0;
       font-size: 3.4rem;
       color: $red
+    }
+
+    @media (max-width: $tablet) {
+      font-size: 20px;
+      line-height: 30px;
+      height: 30px;
+
+      span {
+        font-size: 30px;
+      }
     }
   }
 }

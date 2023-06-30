@@ -160,8 +160,13 @@
   const concertNumber = '35';
   const artObject = '2';
   const footballNumber = '31';
+  const vw = window.innerWidth;
   // ACTIONS
-  mapScroller?.scroll({left: 275})
+
+  setTimeout(()=>{
+    mapScroller?.scroll({left: 275})
+  },0)
+
 
   figures.forEach((figure) => {
     figure.addEventListener('click', () => {
@@ -214,7 +219,7 @@
 
   function onFigureClick(figure) {
     modalGoTo.classList.remove('is-hidden');
-    const locationNumber = figure.classList[1];
+    const locationNumber = figure.classList[1].split('_')[1];
 
     const mapOffset = document.getElementById('map').getBoundingClientRect().top + document.documentElement.scrollTop
 
@@ -344,8 +349,8 @@ function fillLegendList() {
   const locationsArray = Object.entries(locations);
 
   locationsArray.forEach(([index,value]) => {
-    const figure = document.getElementById(`figure ${index}`);
 
+    const figure = document.querySelector(`.figure_${index}`);
     // не показываем локации, которых нет на карте.
     if (!figure) return;
 
