@@ -32,11 +32,11 @@
     width: 136%;
     max-width: 179.6rem;
     margin-left: 25%;
-    margin-top: -9.3rem;
+    margin-top: -2.3rem;
 
     @media (max-width: 1680px) {
       width: 123%;
-      margin-top: 0;
+      margin-top: 8rem;;
     }
 
 
@@ -155,8 +155,8 @@
 
   &__modal {
     position: absolute;
-    top: 11rem;
-    left: 22rem;
+    top: 29rem;
+    left: 41rem;
     z-index: 115;
     width: 37.2rem;
     background-color: $purple;
@@ -279,6 +279,7 @@
       position: relative;
       width: 100%;
       height: 575px;
+      padding: 45px 16px;
     }
 
     @media (max-width: $mobile) {
